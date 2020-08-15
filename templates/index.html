@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavan Guruji #1 STUD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    body {
+        font-family: 'Titillium Web', sans-serif;
+        height: 100vh;
+        width: 100vw;
+        background-color: #E6F0FE;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    #main_container {
+        grid-column: 3/11;
+        padding: 2rem;
+        background-color: #E6F0FE;
+        margin: 16px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: 13px 13px 20px #cbced1,
+            -13px -13px 20px #ffffff;
+    }
+
+    .input-container {
+        margin: 0.2rem;
+        padding: 0.4rem;
+        width: 80%;
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+
+    .input-container>label {
+        padding: 0.8rem;
+        color: #979797;
+        font-size: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    .input-container>input,
+    .input-container>select {
+        box-shadow: inset 8px 8px 8px #cbced1,
+            inset -8px -8px 8px #ffffff;
+        border: 0;
+        padding: 0.8rem;
+        border-radius: 0.4rem;
+        font-size: 18px;
+        color: #979797;
+    }
+
+    .input-container>input::placeholder {
+        color: #cacaca;
+    }
+
+    .input-container>input:focus,
+    .input-container>select:focus {
+        border: none;
+        outline: none;
+    }
+
+    .submit_container {
+        display: flex;
+        justify-content: flex-end;
+        width: 80%;
+        padding: 0.8rem;
+    }
+
+    .submit_container>button {
+        padding: 0.8rem;
+        font-size: 22px;
+        border-radius: 20px;
+        background-color: rgb(82, 150, 150);
+        border: 0;
+        box-shadow: 3px 3px 8px #b1b1b1,
+            -3px -3px 8px #ffffff;
+        transition: 0.5s;
+        color: snow;
+    }
+</style>
+
+<body>
+    <form id="main_container" method="post" action="{{ url_for('output')}}">
+        <div class="input-container">
+            <label>Loan Amount</label>
+            <input type="number" id="loan_amnt" name="loan_amnt" placeholder="Loan Amount" required>
+        </div>
+
+        <div class="input-container">
+            <label for="Rate_of_intrst">Rate of interest</label>
+            <input type="number" id="Rate_of_intrst" name="Rate_of_intrst" min="0" max="40"
+                placeholder="Rate of Interest" required>
+        </div>
+
+        <div class="input-container">
+            <label for="annual_inc">Annual Income</label>
+            <input type="number" id="annual_inc" name="annual_inc" placeholder="Annual income" required>
+        </div>
+
+        <div class="input-container">
+            <label for="debt_income_ratio">Debt Income Ratio</label>
+            <input type="number" id="debt_income_ratio" name="debt_income_ratio" placeholder="Debt Income Ratio"
+                required>
+        </div>
+
+        <div class="input-container">
+            <label for="delinq_2yrs">Delinquency of past 2 years</label>
+            <input type="number" id="delinq_2yrs" name="delinq_2yrs" min="0" max="50"
+                placeholder="Delinquency of past 2 years" required>
+        </div>
+
+        <div class="input-container">
+            <label for="inq_last_6mths">Inquiries made in past 6 months</label>
+            <input type="number" id="inq_last_6mths" name="inq_last_6mths" min="0" max="50"
+                placeholder="Inquiries made in past 6 months" required>
+        </div>
+
+        <div class="input-container">
+            <label for="numb_credit">Number of open credit lines</label>
+            <input type="number" id="numb_credit" name="numb_credit" min="0" max="100"
+                placeholder="Number of open credit lines" required>
+        </div>
+
+        <div class="input-container">
+            <label for="pub_rec">No. of months since last public record</label>
+            <input type="number" id="pub_rec" name="pub_rec" min="0" max="100"
+                placeholder="Number of months since last public record" required>
+        </div>
+        <div class="input-container">
+            <label for="total_credits">Total no. of credit lines available</label>
+            <input type="number" id="total_credits" name="total_credits" min="0" max="200"
+                placeholder="Total number of credit lines available" required>
+        </div>
+
+        <div class="input-container">
+            <label for="Experience">Experience</label>
+            <select id="Experience" name="Experience" required>
+                <option value="< 1 year">
+                    <1 year </option>
+                <option value="1 year"> 1 year </option>
+                <option value="2 year"> 2 year </option>
+                <option value="3 year"> 3 year </option>
+                <option value="4 year"> 4 year </option>
+                <option value="5 year"> 5 year </option>
+                <option value="6 year"> 6 year </option>
+                <option value="7 year"> 7 year </option>
+                <option value="8 year"> 8 year</option>
+                <option value="9 year"> 9 year </option>
+                <option value="10+ years"> 10+ year </option>
+            </select>
+        </div>
+        <div class="input-container">
+            <label for="Purpose">Purpose</label>
+            <select id="Purpose" name="Purpose">
+                <option value="debt_consolidation">debt_consolidation </option>
+                <option value="credit_card">credit_card </option>
+                <option value="home_improvement">home_improvement </option>
+                <option value="other">other </option>
+                <option value="major_purchase">major_purchase </option>
+                <option value="small_business">small_business </option>
+                <option value="car">car </option>
+                <option value="medical">medical </option>
+                <option value="moving">moving</option>
+                <option value="vacation">vacation </option>
+                <option value="house">house </option>
+                <option value="wedding">wedding </option>
+                <option value="renewable_energy">renewable_energy </option>
+                <option value="educational">educational </option>
+            </select>
+        </div>
+        <div class="input-container">
+            <label for="total_rec_int">Total recieved interest</label>
+            <input type="number" id="total_rec_int" name="total_rec_int" placeholder="Total recieved interest" required>
+        </div>
+        <div class="input-container">
+            <label for="total_rec_late_fee">Total recieved late fees</label>
+            <input type="number" id="total_rec_late_fee" name="total_rec_late_fee"
+                placeholder="Total recieved late fees" required>
+        </div>
+
+        <div class="input-container">
+            <label for="tot_colle_amt">Total collected amount</label>
+            <input type="number" id="tot_colle_amt" name="tot_colle_amt" placeholder="Total collected amount" required>
+        </div>
+        <div class="input-container">
+            <label for="tot_curr_bal">Total current balance</label>
+            <input type="number" id="tot_curr_bal" name="tot_curr_bal" placeholder="Total current balance" required>
+        </div>
+        <div class="input-container">
+            <label for="collections_12_mths_ex_med">Collection 12 months except medical</label>
+            <input type="number" id="collections_12_mths_ex_med" name="collections_12_mths_ex_med" min="0" max="30"
+                placeholder="Collection 12 months except medical" required>
+        </div>
+
+        <div class="submit_container">
+            <button type="submit">Predict</button>
+
+        </div>
+    </form>
+</body>
+
+</html>
