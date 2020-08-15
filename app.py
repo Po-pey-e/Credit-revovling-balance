@@ -16,6 +16,6 @@ def index():
 def output():
     int_features = [x for x in request.form.values()]
     final_features = [np.array(int_features)]
-    prediction = model.predict(final_features)
+    # prediction = model.predict(final_features)
 
-    return render_template('output.html', prediction_text=prediction)
+    return render_template('output.html', prediction_text=int_features)

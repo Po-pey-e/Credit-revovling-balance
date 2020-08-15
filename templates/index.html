@@ -102,9 +102,154 @@
         </div>
 
         <div class="input-container">
+            <label>Terms</label>
+            <select id="terms" name="terms" required>
+                <option value="36 months">36 months</option>
+                <option value="60 months">60 months</option>
+            </select>
+        </div>
+
+        <div class="input-container">
             <label for="Rate_of_intrst">Rate of interest</label>
             <input type="number" id="Rate_of_intrst" name="Rate_of_intrst" min="0" max="40"
                 placeholder="Rate of Interest" required>
+        </div>
+
+        <div class="input-container">
+            <label>Verification Status</label>
+            <select name="verification_status">
+                <option>Source Verified</option>
+                <option>Not Verified</option>
+                <option>Verified</option>
+            </select>
+        </div>
+
+        <div class="input-container">
+            <label for="Purpose">Purpose</label>
+            <select id="Purpose" name="Purpose">
+                <option value="debt_consolidation">debt_consolidation </option>
+                <option value="credit_card">credit_card </option>
+                <option value="home_improvement">home_improvement </option>
+                <option value="other">other </option>
+                <option value="major_purchase">major_purchase </option>
+                <option value="small_business">small_business </option>
+                <option value="car">car </option>
+                <option value="medical">medical </option>
+                <option value="moving">moving</option>
+                <option value="vacation">vacation </option>
+                <option value="house">house </option>
+                <option value="wedding">wedding </option>
+                <option value="renewable_energy">renewable_energy </option>
+                <option value="educational">educational </option>
+            </select>
+        </div>
+
+        <div class="input-container">
+            <label>State</label>
+            <select name="State">
+                <option>FL</option>
+                <option>MD</option>
+                <option>OH</option>
+                <option>VA</option>
+                <option>CA</option>
+                <option>IN</option>
+                <option>AL</option>
+                <option>KY</option>
+                <option>NM</option>
+                <option>TN</option>
+                <option>TX</option>
+                <option>PA</option>
+                <option>KS</option>
+                <option>IL</option>
+                <option>NY</option>
+                <option>MO</option>
+                <option>NC</option>
+                <option>NJ</option>
+                <option>CT</option>
+                <option>NH</option>
+                <option>MI</option>
+                <option>AZ</option>
+                <option>GA</option>
+                <option>UT</option>
+                <option>OK</option>
+                <option>NV</option>
+                <option>MN</option>
+                <option>VT</option>
+                <option>MA</option>
+                <option>DE</option>
+                <option>LA</option>
+                <option>WA</option>
+                <option>AR</option>
+                <option>CO</option>
+                <option>WV</option>
+                <option>HI</option>
+                <option>WI</option>
+                <option>SD</option>
+                <option>NE</option>
+                <option>RI</option>
+                <option>WY</option>
+                <option>SC</option>
+                <option>AK</option>
+                <option>MS</option>
+                <option>MT</option>
+                <option>OR</option>
+                <option>ME</option>
+                <option>DC</option>
+                <option>ND</option>
+                <option>IA</option>
+                <option>ID</option>
+            </select>
+        </div>
+
+
+        <div class="input-container">
+            <label for="debt_income_ratio">Debt Income Ratio</label>
+            <input type="number" id="debt_income_ratio" name="debt_income_ratio" placeholder="Debt Income Ratio"
+                required>
+        </div>
+
+
+        <div class="input-container">
+            <label>Initial List Status</label>
+            <select name="initial_list_status">
+                <option>f</option>
+                <option>w</option>
+            </select>
+        </div>
+
+        <div class="input-container">
+            <label for="total_rec_int">Total recieved interest</label>
+            <input type="number" id="total_rec_int" name="total_rec_int" placeholder="Total recieved interest" required>
+        </div>
+        <div class="input-container">
+            <label for="total_rec_late_fee">Total recieved late fees</label>
+            <input type="number" id="total_rec_late_fee" name="total_rec_late_fee"
+                placeholder="Total recieved late fees" required>
+        </div>
+        <div class="input-container">
+            <label>Recovery</label>
+            <input type="number" name="recoveries" placeholder="Recoveries" />
+        </div>
+
+        <div class="input-container">
+            <label>Collection recovery fee</label>
+            <input type="number" name="collection_recovery_fee" placeholder="Collection Recovery fee" />
+        </div>
+
+        <div class="input-container">
+            <label>Application Type</label>
+            <select name="application_type">
+                <option>INDIVIDUAL</option>
+                <option>JOINT</option>
+            </select>
+        </div>
+
+
+        <div class="input-container">
+            <label>Last week Pay</label>
+            <select name="last_week_pay">
+                <option>43th week</option>
+            </select>
         </div>
 
         <div class="input-container">
@@ -112,11 +257,6 @@
             <input type="number" id="annual_inc" name="annual_inc" placeholder="Annual income" required>
         </div>
 
-        <div class="input-container">
-            <label for="debt_income_ratio">Debt Income Ratio</label>
-            <input type="number" id="debt_income_ratio" name="debt_income_ratio" placeholder="Debt Income Ratio"
-                required>
-        </div>
 
         <div class="input-container">
             <label for="delinq_2yrs">Delinquency of past 2 years</label>
@@ -148,50 +288,17 @@
         </div>
 
         <div class="input-container">
-            <label for="Experience">Experience</label>
-            <select id="Experience" name="Experience" required>
-                <option value="< 1 year">
-                    <1 year </option>
-                <option value="1 year"> 1 year </option>
-                <option value="2 year"> 2 year </option>
-                <option value="3 year"> 3 year </option>
-                <option value="4 year"> 4 year </option>
-                <option value="5 year"> 5 year </option>
-                <option value="6 year"> 6 year </option>
-                <option value="7 year"> 7 year </option>
-                <option value="8 year"> 8 year</option>
-                <option value="9 year"> 9 year </option>
-                <option value="10+ years"> 10+ year </option>
-            </select>
+            <label for="collections_12_mths_ex_med">Collection 12 months except medical</label>
+            <input type="number" id="collections_12_mths_ex_med" name="collections_12_mths_ex_med" min="0" max="30"
+                placeholder="Collection 12 months except medical" required>
         </div>
+
         <div class="input-container">
-            <label for="Purpose">Purpose</label>
-            <select id="Purpose" name="Purpose">
-                <option value="debt_consolidation">debt_consolidation </option>
-                <option value="credit_card">credit_card </option>
-                <option value="home_improvement">home_improvement </option>
-                <option value="other">other </option>
-                <option value="major_purchase">major_purchase </option>
-                <option value="small_business">small_business </option>
-                <option value="car">car </option>
-                <option value="medical">medical </option>
-                <option value="moving">moving</option>
-                <option value="vacation">vacation </option>
-                <option value="house">house </option>
-                <option value="wedding">wedding </option>
-                <option value="renewable_energy">renewable_energy </option>
-                <option value="educational">educational </option>
-            </select>
+            <label for="acc_now_delinq">Account now Delinquency</label>
+            <input type="number" id="acc_now_delinq" name="acc_now_delinq" min="0" max="16"
+                placeholder="Account now Delinquency" required>
         </div>
-        <div class="input-container">
-            <label for="total_rec_int">Total recieved interest</label>
-            <input type="number" id="total_rec_int" name="total_rec_int" placeholder="Total recieved interest" required>
-        </div>
-        <div class="input-container">
-            <label for="total_rec_late_fee">Total recieved late fees</label>
-            <input type="number" id="total_rec_late_fee" name="total_rec_late_fee"
-                placeholder="Total recieved late fees" required>
-        </div>
+
 
         <div class="input-container">
             <label for="tot_colle_amt">Total collected amount</label>
@@ -201,11 +308,7 @@
             <label for="tot_curr_bal">Total current balance</label>
             <input type="number" id="tot_curr_bal" name="tot_curr_bal" placeholder="Total current balance" required>
         </div>
-        <div class="input-container">
-            <label for="collections_12_mths_ex_med">Collection 12 months except medical</label>
-            <input type="number" id="collections_12_mths_ex_med" name="collections_12_mths_ex_med" min="0" max="30"
-                placeholder="Collection 12 months except medical" required>
-        </div>
+
 
         <div class="submit_container">
             <button type="submit">Predict</button>
