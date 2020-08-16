@@ -98,14 +98,14 @@
     <form id="main_container" method="post" action="{{ url_for('output')}}">
         <div class="input-container">
             <label>Loan Amount</label>
-            <input type="number" id="loan_amnt" name="loan_amnt" placeholder="Loan Amount" required>
+            <input type="number" id="loan_amnt" name="loan_amnt " placeholder="Loan Amount" required>
         </div>
 
         <div class="input-container">
             <label>Terms</label>
             <select id="terms" name="terms" required>
-                <option value="36 months">36 months</option>
-                <option value="60 months">60 months</option>
+                <option value="0">36 months</option>
+                <option value="1">60 months</option>
             </select>
         </div>
 
@@ -118,86 +118,86 @@
         <div class="input-container">
             <label>Verification Status</label>
             <select name="verification_status">
-                <option>Source Verified</option>
-                <option>Not Verified</option>
-                <option>Verified</option>
+                <option value="1">Source Verified</option>
+                <option value="0">Not Verified</option>
+                <option value="2">Verified</option>
             </select>
         </div>
 
         <div class="input-container">
             <label for="Purpose">Purpose</label>
             <select id="Purpose" name="Purpose">
-                <option value="debt_consolidation">debt_consolidation </option>
-                <option value="credit_card">credit_card </option>
-                <option value="home_improvement">home_improvement </option>
-                <option value="other">other </option>
-                <option value="major_purchase">major_purchase </option>
-                <option value="small_business">small_business </option>
-                <option value="car">car </option>
-                <option value="medical">medical </option>
-                <option value="moving">moving</option>
-                <option value="vacation">vacation </option>
-                <option value="house">house </option>
-                <option value="wedding">wedding </option>
-                <option value="renewable_energy">renewable_energy </option>
-                <option value="educational">educational </option>
+                <option value="2">debt_consolidation </option>
+                <option value="1">credit_card </option>
+                <option value="4">home_improvement </option>
+                <option value="9">other </option>
+                <option value="6">major_purchase </option>
+                <option value="11">small_business </option>
+                <option value="0">car </option>
+                <option value="7">medical </option>
+                <option value="8">moving</option>
+                <option value="12">vacation </option>
+                <option value="5">house </option>
+                <option value="13">wedding </option>
+                <option value="10">renewable_energy </option>
+                <option value="3">educational </option>
             </select>
         </div>
 
         <div class="input-container">
             <label>State</label>
             <select name="State">
-                <option>FL</option>
-                <option>MD</option>
-                <option>OH</option>
-                <option>VA</option>
-                <option>CA</option>
-                <option>IN</option>
-                <option>AL</option>
-                <option>KY</option>
-                <option>NM</option>
-                <option>TN</option>
-                <option>TX</option>
-                <option>PA</option>
-                <option>KS</option>
-                <option>IL</option>
-                <option>NY</option>
-                <option>MO</option>
-                <option>NC</option>
-                <option>NJ</option>
-                <option>CT</option>
-                <option>NH</option>
-                <option>MI</option>
-                <option>AZ</option>
-                <option>GA</option>
-                <option>UT</option>
-                <option>OK</option>
-                <option>NV</option>
-                <option>MN</option>
-                <option>VT</option>
-                <option>MA</option>
-                <option>DE</option>
-                <option>LA</option>
-                <option>WA</option>
-                <option>AR</option>
-                <option>CO</option>
-                <option>WV</option>
-                <option>HI</option>
-                <option>WI</option>
-                <option>SD</option>
-                <option>NE</option>
-                <option>RI</option>
-                <option>WY</option>
-                <option>SC</option>
-                <option>AK</option>
-                <option>MS</option>
-                <option>MT</option>
-                <option>OR</option>
-                <option>ME</option>
-                <option>DC</option>
-                <option>ND</option>
-                <option>IA</option>
-                <option>ID</option>
+                <option value="9">FL</option>
+                <option value="20">MD</option>
+                <option value="35">OH</option>
+                <option value="45">VA</option>
+                <option value="4">CA</option>
+                <option value="15">IN</option>
+                <option value="1">AL</option>
+                <option value="17">KY</option>
+                <option value="32">NM</option>
+                <option value="42">TN</option>
+                <option value="43">TX</option>
+                <option value="38">PA</option>
+                <option value="16">KS</option>
+                <option value="14">IL</option>
+                <option value="34">NY</option>
+                <option value="24">MO</option>
+                <option value="27">NC</option>
+                <option value="31">NJ</option>
+                <option value="6">CT</option>
+                <option value="30">NH</option>
+                <option value="22">MI</option>
+                <option value="3">AZ</option>
+                <option value="10">GA</option>
+                <option value="44">UT</option>
+                <option value="36">OK</option>
+                <option value="33">NV</option>
+                <option value="23">MN</option>
+                <option value="46">VT</option>
+                <option value="19">MA</option>
+                <option value="8">DE</option>
+                <option value="18">LA</option>
+                <option value="47">WA</option>
+                <option value="2">AR</option>
+                <option value="5">CO</option>
+                <option value="49">WV</option>
+                <option value="11">HI</option>
+                <option value="48">WI</option>
+                <option value="41">SD</option>
+                <option value="29">NE</option>
+                <option value="39">RI</option>
+                <option value="50">WY</option>
+                <option value="40">SC</option>
+                <option value="0">AK</option>
+                <option value="25">MS</option>
+                <option value="26">MT</option>
+                <option value="37">OR</option>
+                <option value="21">ME</option>
+                <option value="7">DC</option>
+                <option value="28">ND</option>
+                <option value="12">IA</option>
+                <option value="13">ID</option>
             </select>
         </div>
 
@@ -212,8 +212,8 @@
         <div class="input-container">
             <label>Initial List Status</label>
             <select name="initial_list_status">
-                <option>f</option>
-                <option>w</option>
+                <option value="0">f</option>
+                <option value="1">w</option>
             </select>
         </div>
 
@@ -239,18 +239,11 @@
         <div class="input-container">
             <label>Application Type</label>
             <select name="application_type">
-                <option>INDIVIDUAL</option>
-                <option>JOINT</option>
+                <option value="0">INDIVIDUAL</option>
+                <option value="1">JOINT</option>
             </select>
         </div>
 
-
-        <div class="input-container">
-            <label>Last week Pay</label>
-            <select name="last_week_pay">
-                <option>43th week</option>
-            </select>
-        </div>
 
         <div class="input-container">
             <label for="annual_inc">Annual Income</label>
